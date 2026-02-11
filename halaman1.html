@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+</head>
+<body>
+
+<h2>Register</h2>
+<input type="text" id="regUser" placeholder="Username">
+<input type="password" id="regPass" placeholder="Password">
+<button onclick="register()">Register</button>
+
+<script>
+function register(){
+    let user = document.getElementById("regUser").value;
+    let pass = document.getElementById("regPass").value;
+
+    localStorage.setItem("user",user);
+    localStorage.setItem("pass",pass);
+
+    alert("Register berhasil!");
+    window.location.href="halaman2.html";
+}
+</script>
+
+</body>
+</html>
