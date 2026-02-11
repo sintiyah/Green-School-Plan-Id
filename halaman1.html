@@ -18,7 +18,7 @@ body{
 .box{
     background:white;
     padding:35px;
-    width:320px;
+    width:340px;
     border-radius:15px;
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
     text-align:center;
@@ -59,6 +59,16 @@ button{
 button:hover{
     background:#1e8449;
 }
+
+.login-link{
+    margin-top:10px;
+    font-size:14px;
+}
+
+.login-link a{
+    text-decoration:none;
+    color:#27ae60;
+}
 </style>
 
 </head>
@@ -67,24 +77,38 @@ button:hover{
 <div class="box">
     <h2>🌿 Register</h2>
 
+    <input type="text" id="nama" placeholder="Nama Lengkap">
     <input type="text" id="regUser" placeholder="Username">
     <input type="password" id="regPass" placeholder="Password">
+    <input type="password" id="confirmPass" placeholder="Konfirmasi Password">
 
     <button onclick="register()">Register</button>
+
+    <div class="login-link">
+        Sudah punya akun? <a href="login.html">Login</a>
+    </div>
 </div>
 
 <script>
 function register(){
+    let nama = document.getElementById("nama").value;
     let user = document.getElementById("regUser").value;
     let pass = document.getElementById("regPass").value;
+    let confirm = document.getElementById("confirmPass").value;
 
-    if(!user || !pass){
-        alert("Isi semua data dulu ya!");
+    if(!nama || !user || !pass || !confirm){
+        alert("Semua data wajib diisi!");
         return;
     }
 
-    localStorage.setItem("user",user);
-    localStorage.setItem("pass",pass);
+    if(pass !== confirm){
+        alert("Password tidak sama!");
+        return;
+    }
+
+    localStorage.setItem("nama", nama);
+    localStorage.setItem("user", user);
+    localStorage.setItem("pass", pass);
 
     alert("Register berhasil!");
     window.location.href="halaman2.html";
