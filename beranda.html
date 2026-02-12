@@ -5,87 +5,82 @@
 <style>
 body{
     margin:0;
-    font-family:Arial;
-    background:#f4f6f7;
+    font-family: 'Segoe UI', sans-serif;
+    background:linear-gradient(135deg,#e8f8f5,#d5f5e3);
 }
 
-.sidebar{
-    width:220px;
-    height:100vh;
+.header{
     background:#27ae60;
     color:white;
-    position:fixed;
     padding:20px;
-}
-
-.profile{
     text-align:center;
-    margin-bottom:20px;
+    font-size:22px;
+    font-weight:bold;
 }
 
-.profile img{
-    width:80px;
-    border-radius:50%;
-    margin-bottom:10px;
-}
-
-.menu a{
-    display:block;
-    color:white;
-    text-decoration:none;
-    margin:12px 0;
-}
-
-.menu a:hover{
-    text-decoration:underline;
-}
-
-.content{
-    margin-left:240px;
+.container{
     padding:30px;
+}
+
+.welcome-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom:30px;
+}
+
+.menu-box{
+    display:flex;
+    gap:20px;
+    justify-content:center;
 }
 
 .card{
     background:white;
+    width:220px;
     padding:20px;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    border-radius:15px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    background:#27ae60;
+    color:white;
 }
 </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <div class="profile">
-        <img src="https://i.pravatar.cc/100" alt="Profile">
-        <h3>Green School</h3>
-    </div>
-
-    <div class="menu">
-        <a href="halaman_beranda.html">Beranda</a>
-        <a href="halmaan3.html">Jadwal</a>
-        <a href="halaman2.html">Logout</a>
-    </div>
+<div class="header">
+    🌿 Green School Plant ID
 </div>
 
-<div class="content">
-    <h2>Selamat Datang 🌿</h2>
+<div class="container">
 
-    <div class="card">
-        <h3>Informasi Hari Ini</h3>
-        <p>Kegiatan perawatan tanaman herbal dilakukan pukul 08.00 WIB.</p>
+    <div class="welcome-box">
+        <h2>Selamat Datang!</h2>
+        <p>Kelola jadwal dan kegiatan tanaman herbal dengan mudah.</p>
     </div>
 
-    <div class="card">
-        <h3>Pengumuman</h3>
-        <p>Setiap siswa wajib mengisi laporan setelah melakukan perawatan.</p>
+    <div class="menu-box">
+        <a href="jadwal.html" class="card">
+            <h3>📅 Jadwal</h3>
+            <p>Lihat jadwal kegiatan</p>
+        </a>
+
+        <a href="halaman1.html" class="card">
+            <h3>🚪 Logout</h3>
+            <p>Keluar dari akun</p>
+        </a>
     </div>
 
-    <div class="card">
-        <h3>Tujuan Aplikasi</h3>
-        <p>Aplikasi ini membantu siswa dan guru dalam mengelola kegiatan Green School Plant ID.</p>
-    </div>
 </div>
 
 </body>

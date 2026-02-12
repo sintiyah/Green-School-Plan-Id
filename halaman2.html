@@ -41,8 +41,8 @@ button{
     <input type="password" id="password" placeholder="Password">
 
     <button onclick="login()">Login</button>
-    <p>Belum punya akun? <a href="beranda.html">Register</a></p>
-    <a href="beranda.html">Kembali ke Beranda</a>
+    <p>Belum punya akun? <a href="halaman1.html">Register</a></p>
+    <a href=""></a>
 </div>
 
 <script>
@@ -62,7 +62,7 @@ function login(){
 
     if(user === savedUser && pass === savedPass){
         alert("Login berhasil!");
-        window.location.href="halaman_user.html";
+        window.location.href="beranda.html";
     } else {
         alert("Login gagal!");
     }
