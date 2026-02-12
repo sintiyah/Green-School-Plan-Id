@@ -1,83 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Beranda - Green School Plant ID</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green School Plant ID</title>
+
 <style>
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:linear-gradient(135deg,#e8f8f5,#d5f5e3);
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e8f5e9, #c8e6c9);
 }
 
-.header{
-    background:#27ae60;
-    color:white;
-    padding:20px;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
+/* Container utama */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    min-height: 100vh;
 }
 
-.container{
-    padding:30px;
+/* Bagian teks */
+.text-section {
+    width: 50%;
 }
 
-.welcome-box{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    margin-bottom:30px;
+.text-section h1 {
+    font-size: 40px;
+    color: #1b5e20;
+    margin-bottom: 20px;
 }
 
-.menu-box{
-    display:flex;
-    gap:20px;
-    justify-content:center;
+.text-section p {
+    font-size: 18px;
+    color: #2e7d32;
+    margin-bottom: 30px;
 }
 
-.card{
-    background:white;
-    width:220px;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    text-decoration:none;
-    color:#333;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+/* Tombol */
+.btn {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    padding: 12px 28px;
+    background-color: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-    background:#27ae60;
-    color:white;
+.btn:hover {
+    background-color: #1b5e20;
+}
+
+/* Bagian gambar */
+.image-section {
+    width: 45%;
+    text-align: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .text-section {
+        width: 100%;
+    }
+
+    .image-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .text-section h1 {
+        font-size: 28px;
+    }
+
+    .text-section p {
+        font-size: 16px;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 70%;
+    }
 }
 </style>
 </head>
-<body>
 
-<div class="header">
-    🌿 Green School Plant ID
-</div>
+<body>
 
 <div class="container">
 
-    <div class="welcome-box">
-        <h2>Selamat Datang!</h2>
-        <p>Kelola jadwal dan kegiatan tanaman herbal dengan mudah.</p>
+    <div class="text-section">
+        <h1>Welcome To Green School Plant ID 🌿</h1>
+        <p>
+        Aplikasi identifikasi dan perawatan tanaman herbal di sekolah.
+        Belajar menanam, merawat, dan menjaga lingkungan jadi lebih mudah!
+        </p>
+
+        <a href="register.html" class="btn">Register</a>
+        <a href="login.html" class="btn">Login</a>
     </div>
 
-    <div class="menu-box">
-        <a href="jadwal.html" class="card">
-            <h3>📅 Jadwal</h3>
-            <p>Lihat jadwal kegiatan</p>
-        </a>
-         <a href="informasi.html" class="card">
-            <h3>📋 Informasi</h3>
-            <p>Lihat informasi tanaman herbal</p>
-        </a>
+    <div class="image-section">
+        <img src="tanaman.jpg" alt="Tanaman">
     </div>
 
 </div>
